@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+    height: 2000px;
+    background-color: #c4c4c4;
+    width: 100%;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-color: #30598c;
+    width: 100%;
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
+    height: 60px;
+    position: relative;
+}
+
+#header-logo {
+    align-items: center;
+    text-align: center;
+    height: 60px;
+    display: flex;
+    margin: 0 20px;
+}
+
+#nav {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+#nav {
+    height: 60px;
+}
+
+.nav-menu li {
+    display: inline-block;
+    padding: 0 20px;
+
+
+}
+
+.nav-menu>li>a {
+    color: #fff;
+    display: inline-block;
+    line-height: 60px;
+}
+
+.nav-menu>li>a:hover {
+    color: #c4c4c4;
+}
+.nav-user {
+    height: 60px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.nav-shop {
+    margin-left: 10px;
+}
+
+.nav-user,
+.nav-shop:hover {
+    cursor: pointer;
+}
+
+.nav-tap {
+    height: 1px;
+    background-color: black;
+}
+
+/* .nav-menu li:hover .nav-menu-item {
+    display: block;
+}  */
+.open {
+    display: block !important;
+}
+.nav-menu-item {
+    display: none;
+    position: absolute;
+    color: black;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding-top: 0;
+    background-color: #fff;
+    animation: modalFacein ease-in-out 0.5;
+    overflow: auto;
+}
+
+.sub-nav {
+    display: flex;
+    margin: 0px 40px;
+    max-width: 1140px;
+    gap: 40px;
+    text-align: center;
+    align-items: center;
+
+
+}
+.sub-item-title {
+    position: relative;
+
+}
+.ti-book,
+.ti-user {
+    padding-right: 10px;
+}
+
+.sub-nav-item {
+    /* padding:16px 30px 16px 0px; */
+    height: 52px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    cursor: pointer;
+}
+.sub-item-title::after {
+    background-color: #30598c;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 40px;
+}
+
+.sub-nav-item:hover {
+    border-bottom: 1px solid #30598c;
+    color: #30598c;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0px 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.content {
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+.sub-content {
+    display: flex;
+    font-size: 16px;
+    gap: 80px;
+}
+.sub-item {
+    text-align: left;
+}
+.sub-item a {
+    display: block;
+    color: black;
+}
+.sub-item-title {
+    padding: 20px 0;
+    color: #30598c;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.sub-item a{
+    padding: 10px 0;
+    font-weight: 400;
+}
+.sub-item>a:hover {
+    color: #30598c;
+}
+
+.sub-nav-active {
+    border-bottom: 1px solid #30598c;
+    color: #30598c;
+}
+@keyframes modalFaceIn {
+    from {
+        max-height: 0; 
+    }
+    to {
+        max-height: 400px;
+
+    }
+}
