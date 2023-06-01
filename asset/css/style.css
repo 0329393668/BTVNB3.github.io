@@ -13,7 +13,7 @@ html {
 
 #main {
     height: 2000px;
-    background-color: #c4c4c4;
+    background-color: #ffffff;
     width: 100%;
 }
 
@@ -27,7 +27,11 @@ html {
     width: 100%;
     box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
     height: 60px;
-    position: relative;
+    position: relative !important;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+
 }
 
 #header-logo {
@@ -64,11 +68,15 @@ html {
 .nav-menu>li>a:hover {
     color: #c4c4c4;
 }
+.nav-menu>li:hover>.nav-menu-sub {
+    display: block;
+}
 .nav-user {
     height: 60px;
     display: flex;
     text-align: center;
     align-items: center;
+    position: relative;
 }
 
 .nav-shop {
@@ -103,6 +111,7 @@ html {
     background-color: #fff;
     animation: modalFacein ease-in-out 0.5;
     overflow: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .sub-nav {
@@ -148,12 +157,77 @@ html {
     color: #30598c;
 }
 
+.nav-menu-sub {
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    display: none;
+    left: auto;
+    padding: 0;
+    right: 144px;
+    width: 200px;
+    z-index: 1000;
+}
+.nav-menu-sub li {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+}
+
+.nav-menu-sub a {
+    color: #7c7c7c;
+    font-size: 15px;
+    line-height: 40px;
+}
+.nav-menu-sub>li:hover>a {
+    color: #fff;
+}
+.nav-menu-sub>li:hover {
+    background-color: #7c7c7c;
+}
+/* lam nút user */
+.nav-menu-sub1 {
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    display: none;
+    left: auto;
+    padding: 0;
+    right: 0;
+    width: 200px;
+    top: 60px;
+}
+.nav-menu-sub1 li {
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    
+}
+
+.nav-menu-sub1 a {
+    color: #7c7c7c;
+    font-size: 15px;
+    line-height: 40px;
+}
+.nav-menu-sub1>li:hover>a {
+    color: #fff;
+}
+.nav-menu-sub1>li:hover {
+    background-color: #7c7c7c;
+}
+.nav-user:hover .nav-menu-sub1 {
+    display: block;
+}
+/*  */
+.nav-menu>li>a {
+    position: relative;
+}
+
 .container {
     width: 100%;
     max-width: 1140px;
     margin: 0px 40px;
     display: flex;
     flex-wrap: wrap;
+    
 }
 .content {
     width: 100%;
